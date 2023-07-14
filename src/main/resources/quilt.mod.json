@@ -2,11 +2,11 @@
 	"schema_version": 1,
 	"quilt_loader": {
 		"group": "io.github.feylostt",
-		"id": "example_mod",
+		"id": "familiar",
 		"version": "${version}",
 		"metadata": {
-			"name": "Mod Name",
-			"description": "A short description of your mod.",
+			"name": "Familiar",
+			"description": "n. \"a demon supposedly attending and obeying a witch, often said to assume the form of an animal.\"",
 			"contributors": {
 				"Feylostt": "Owner"
 			},
@@ -19,7 +19,7 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.feylostt.example_mod.ExampleMod"
+			"init": "io.github.feylostt.familiar.Familiar"
 		},
 		"depends": [
 			{
@@ -36,5 +36,5 @@
 			}
 		]
 	},
-	"mixin": "example_mod.mixins.json"
+	"mixin": "familiar.mixins.json"
 }
