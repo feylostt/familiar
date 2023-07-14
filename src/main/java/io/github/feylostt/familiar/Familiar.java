@@ -22,6 +22,7 @@ public class Familiar implements ModInitializer {
 		FamiliarItems.init();
 		FamiliarBlocks.init();
 
-		FamiliarSpells.init();
+		FamiliarSpells.initializeSpells();
+		FamiliarSpells.initializePotions();
 	}
 }

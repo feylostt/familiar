@@ -25,6 +25,8 @@ public class FamiliarItems {
 	public static Item SELENITE_SHARD; // Minor Regen Aura
 	public static Item POWDERED_SELENITE; // Cleansing & Healing - Healing-type Spells
 
+	public static Item MOSS_CLUMP;
+
 	// Plants
 
 	public static void init() {

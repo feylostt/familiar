@@ -3,10 +3,7 @@ package io.github.feylostt.familiar.items;
 import io.github.feylostt.familiar.Familiar;
 import io.github.feylostt.familiar.spells.FamiliarSpells;
 import io.github.feylostt.familiar.spells.Spell;
-import net.minecraft.block.AmethystClusterBlock;
-import net.minecraft.block.EndRodBlock;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.Identifier;
@@ -47,7 +44,7 @@ public class ShardItem extends Item {
 			while(iterator.hasNext()) {
 				livingEntity = (LivingEntity) iterator.next();
 				// Apply effect to every entity
-				spell.applyUpdateEffect(livingEntity, 20);
+				spell.applyUpdateEffect(livingEntity);
 			}
 		}
 	}

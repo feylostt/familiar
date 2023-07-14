@@ -2,11 +2,10 @@ package io.github.feylostt.familiar.spells;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.Monster;
-
-import java.awt.*;
 
 public class Spell {
 
@@ -16,13 +15,14 @@ public class Spell {
 
 	private final SpellType type;
 	private final int color;
+	private StatusEffect effectWrapper;
 
 	public Spell(SpellType type, int color) {
 		this.type = type;
 		this.color = color;
 	}
 
-	public void applyUpdateEffect(LivingEntity entity, int duration) {
+	public void applyUpdateEffect(LivingEntity entity) {
 		if(this == FamiliarSpells.REGENERATION) {
 			if (entity.getHealth() < entity.getMaxHealth() && !(entity instanceof Monster)) {
 				entity.heal(1.0F);
@@ -41,5 +41,17 @@ public class Spell {
 				entity.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 21, 1, true, false, false));
 			}
 		}
+	}
+
+	public StatusEffect getEffectWrapper() {
+		return effectWrapper;
+	}
+
+	public void setEffectWrapper(StatusEffect effectWrapper) {
+		this.effectWrapper = effectWrapper;
+	}
+
+	public int getColor() {
+		return color;
 	}
 }

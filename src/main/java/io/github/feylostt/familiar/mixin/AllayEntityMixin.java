@@ -25,7 +25,6 @@ public class AllayEntityMixin {
 
 			if(itemStack.getItem() instanceof ShardItem && ticks % 20 == 0) {
 				((ShardItem) itemStack.getItem()).applyAuraEffect(thisAllay);
-
 			}
 		}
 	}
